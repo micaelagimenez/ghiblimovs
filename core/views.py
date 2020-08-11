@@ -1,28 +1,47 @@
-from django.shortcuts import render
-
-from .models import Movie
+from django.shortcuts import render, HttpResponse
+from django.http import HttpResponseNotFound
+from core.models import Movie
+from django.views.generic import ListView
 import requests
 
-class MoviesView(APIView):
-    def post(self, request, format=None):
+def index(request):
+    movies = []
+    if request.method == 'POST':
+        
+        film_url = 'https://ghibliapi.herokuapp.com/films/'
+        
+        search_params = {
+            'films' : 'title',
+            'films' : 'description',
+            'films' : 'director',
+            'films' : 'release_date',
+            'q' : request.POST['search']
+            
+            }
 
-        movie_title = request.data.get('movie_title')
+        
+        r = requests.get(film_url, params=search_params)
+        results = r.json()
+        print(results)
 
-        if not movie_title:
-            response = {
-                'error': 'Incorrect movie title'
-                }
-            return Response(response, status.HTTP_400_BAD_RESQUEST)
+        for result in results:
+             movie_data = {
+                'Title' : result['title'],
+                'Release_date': result['release_date'],
+                'Director' : result['director'],
+                'Description' : result['description']
+            }
 
-        url = 'https://ghibliapi.herokuapp.com/films'
+            
+    context = {
+    'movies' : movies
+    }
+         
+    return render(request,'core/index.html', context)
+        
+    
 
-        r = resquest.get(url)
-        r = r.json()
 
-        #movies in api
+class MovieList(ListView):
+    model = Movie
 
-        if r.get('Response') == 'False':
-            response = {
-                'error': f'No movie called {movie_title}'
-                }
-            return Response(response, status.HTTP_400_BAD_RESQUEST)

@@ -12,3 +12,15 @@ class Movie(models.Model):
     title = models.CharField(max_length=300)
     year = models.PositiveIntegerField()
     website = models.URLField(blank=True)
+
+class GhibliMovies(models.Model):
+    
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    director = models.CharField(max_length=10)
+    producer = models.CharField(max_length=10)
+    release_date = models.DateTimeField()
+    rt_score = models.PositiveIntegerField()
+
+    def __str__(self):
+        return self.title

@@ -1,0 +1,28 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+</head>
+    <body>
+      <div class=" header">
+         
+      </div>
+        <div class="wrap">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="search">
+
+
+                    <input type="text" name="search" class="searchTerm" placeholder="Type movie name">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <button type="submit" class="searchButton">
+
+                        <i class="fa fa-search" style="font-size:24px"></i></i>
+                    </button>
+
+                </div>
+            </form>
+        </div>
+</body>
+</html>
