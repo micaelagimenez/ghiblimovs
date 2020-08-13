@@ -2,27 +2,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Ghibli Studio | Movies</title>
     <link rel="stylesheet" href="{% static 'core/main.css' %}">
 </head>
-    <body>
-      <div class=" header">
-         
-      </div>
-        <div class="wrap">
-            <form method="POST">
-                {% csrf_token %}
-                <div class="search">
+<body>
+    <div class=" header">
+
+    </div>
+    <div class="wrap">
+        <form action='/' method="POST">
+            {% csrf_token %}
+            <div class="search">
 
 
-                    <input type="text" name="search" class="searchTerm" placeholder="Type movie name">
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                    <button type="submit" class="searchButton">
+                <input type="text" name="search" class="searchTerm" placeholder="Type movie name">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <button type="submit" class="searchButton">
 
-                        <i class="fa fa-search" style="font-size:24px"></i></i>
-                    </button>
+                    <i class="fa fa-search" style="font-size:24px"></i>
+                </button>
 
-                </div>
-            </form>
-        </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    {% if movies %}
+    {% for movie in movies %}
+    <div>
+        <ul class="result">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+            </style>
+          
+            <h4>{{movie.Title}}</h4>
+            <h5 style= "color:lightslategray;">
+                Release date: {{movie.Release_date}} <br>
+                Director: {{movie.Director}}
+                <br>Producer: {{movie.Producer}}
+                <br>
+                <br>{{movie.Description}}
+            </h5>
+          
+
+        </ul>
+        {% endfor %}
+
+        {% endif %}
+    </div>
+
+
 </body>
 </html>

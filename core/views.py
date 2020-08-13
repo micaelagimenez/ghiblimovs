@@ -1,11 +1,12 @@
 from django.shortcuts import render, HttpResponse
-from django.http import HttpResponseNotFound
-from core.models import Movie
 from django.views.generic import ListView
 import requests
 
+
+
 def index(request):
     movies = []
+    
     if request.method == 'POST':
         
         film_url = 'https://ghibliapi.herokuapp.com/films/'
@@ -22,26 +23,28 @@ def index(request):
         
         r = requests.get(film_url, params=search_params)
         results = r.json()
-        print(results)
+        
 
         for result in results:
              movie_data = {
                 'Title' : result['title'],
                 'Release_date': result['release_date'],
                 'Director' : result['director'],
+                'Producer' : result['producer'],
                 'Description' : result['description']
             }
 
-            
+        movies.append(movie_data)  
+        print(movies)
+     
+
     context = {
     'movies' : movies
     }
-         
-    return render(request,'core/index.html', context)
         
-    
+    return render(request,'core/index.html', context)
+
+     
 
 
-class MovieList(ListView):
-    model = Movie
 
