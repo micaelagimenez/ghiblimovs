@@ -69,14 +69,14 @@ h4 {
     margin-bottom: 500px;
     margin-top: -50px;
     width: 20%;
-    height: 5px;
+    height: 8px;
     text-align: center;
     font-family: 'Dosis', sans-serif;
     padding: 1.5rem 2rem;
     background: url(https://cdna.artstation.com/p/assets/images/images/017/168/420/large/emrullah-cita-ghibli-clouds.jpg?1554902207);
     background-position: center;
     font-size: 1.3rem;
-    color: #ffffff;
+    color: #166EA1;
     text-shadow: #000000;
     position: absolute;
     top: 63%;
@@ -84,7 +84,7 @@ h4 {
     left: 38%;
 }
 h5 {
-    margin-top: -50px;
+    margin-top: -45px;
     background: #F2F4F4;
     width: 20%;
     height: 290px;

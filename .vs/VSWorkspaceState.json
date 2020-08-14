@@ -8,6 +8,6 @@
     "\\core\\templates\\core",
     "\\templates"
   ],
-  "SelectedNode": "\\core\\static\\core\\main.css",
+  "SelectedNode": "\\core\\views.py",
   "PreviewInSolutionExplorer": false
 }
