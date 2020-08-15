@@ -1,1 +1,1 @@
-web: gunicorn ghiblimovs.wsgi:application   --python ghiblimovs --log-file - --log-level debug --preload --workers 1
+web: gunicorn --pythonpath ghiblimovs mysite.wsgi --log-file -
