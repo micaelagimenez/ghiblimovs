@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\core\\static\\core",
+    "\\core",
     "\\core\\templates",
     "\\core\\templates\\core",
     "\\mysite"
   ],
-  "SelectedNode": "\\mysite\\wsgi.py",
+  "SelectedNode": "\\core\\templates\\core\\index.html",
   "PreviewInSolutionExplorer": false
 }
