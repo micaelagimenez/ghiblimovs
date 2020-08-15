@@ -5,8 +5,8 @@ body {
 .header {
     background: url(https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/640px-Studio_Ghibli_logo.svg.png) no-repeat;
     font-size: 14px;
-    width: 640px;
-    height: 307px;
+    max-width: 640px;
+    max-height: 307px;
     background-size: 70%;
     display: block;
     margin-top: 80px;
