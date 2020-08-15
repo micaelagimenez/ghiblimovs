@@ -6,5 +6,3 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
-node_modules
-pywin32==227 
