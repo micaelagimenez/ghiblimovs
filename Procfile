@@ -1,1 +1,1 @@
-web: gunicorn ghiblisearch.wsgi:application  --preload --workers 1
+web: gunicorn ghiblimovs.wsgi:application  --preload --workers 1
