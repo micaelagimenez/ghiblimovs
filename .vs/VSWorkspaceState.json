@@ -2,10 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\core",
+    "\\core\\static",
+    "\\core\\static\\core",
     "\\core\\templates",
     "\\core\\templates\\core",
     "\\mysite"
   ],
-  "SelectedNode": "\\core\\templates\\core\\index.html",
+  "SelectedNode": "\\core\\templates\\core\\main.html",
   "PreviewInSolutionExplorer": false
 }
