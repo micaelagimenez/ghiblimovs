@@ -13,7 +13,7 @@ def index(request):
         
         search_params = {
             'films' : 'title',
-          
+            'films' : 'description',
             'films' : 'director',
             'films' : 'release_date',
             'q' : request.POST['search']
@@ -33,13 +33,14 @@ def index(request):
                 'Producer' : result['producer'],
                 'Description' : result['description']
             }
-             movies.append(movie_data)  
-        
+
+        movies.append(movie_data)  
+        print(movies)
      
 
     context = {
-        'movies' : movies
-         }
+    'movies' : movies
+    }
         
     return render(request,'core/index.html', context)
 
