@@ -2,16 +2,17 @@ body {
     background: #D4E6F1;
     font-family: 'Open Sans', sans-serif;
 }
+
 .header {
-    background: url(https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/640px-Studio_Ghibli_logo.svg.png) no-repeat;
+    background: url(https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/640px-Studio_Ghibli_logo.svg.png) no-repeat center;
     font-size: 14px;
-    max-width: 640px;
-    max-height: 307px;
+    width: 640px;
+    height: 307px;
     background-size: 70%;
     display: block;
     margin-top: 80px;
     margin-left: auto;
-    margin-right: 340px;
+    margin-right: auto;
 }
 
 .search {
@@ -22,14 +23,13 @@ body {
 
 .searchTerm {
     width: 100%;
-    border: 3px solid #AEB6BF ;
+    border: 3px solid #AEB6BF;
     border-right: none;
     padding: 5px;
     height: 20px;
-    margin-top: 110px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #AEB6BF ;
+    color: #AEB6BF;
 }
 
     .searchTerm:focus {
@@ -43,7 +43,6 @@ body {
     background: #D4E6F1;
     text-align: center;
     color: #AEB6BF;
-    margin-top: 110px;
     border-radius: 0 2px 2px 0;
     cursor: pointer;
     font-size: 20px;
@@ -52,11 +51,9 @@ body {
 /*Resize the wrap to see the search bar change!*/
 .wrap {
     width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
 }
+
 html {
     font-family: 'Dosis', sans-serif;
     line-height: 1.6;
@@ -67,24 +64,25 @@ html {
 
 h4 {
     margin-bottom: 500px;
-    margin-top: -50px;
+    margin-top: -30px;
     width: 20%;
-    height: 8px;
+    height: 5px;
     text-align: center;
     font-family: 'Dosis', sans-serif;
     padding: 1.5rem 2rem;
     background: url(https://cdna.artstation.com/p/assets/images/images/017/168/420/large/emrullah-cita-ghibli-clouds.jpg?1554902207);
     background-position: center;
     font-size: 1.3rem;
-    color: #166EA1;
+    color: #ffffff;
     text-shadow: #000000;
     position: absolute;
     top: 63%;
     border-radius: 12px 12px 0 0;
     left: 38%;
 }
+
 h5 {
-    margin-top: -45px;
+    margin-top: -30px;
     background: #F2F4F4;
     width: 20%;
     height: 290px;
@@ -98,5 +96,4 @@ h5 {
     overflow: hidden;
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     border-radius: 0 0 12px 12px;
-
 }
