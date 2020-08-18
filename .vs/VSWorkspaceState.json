@@ -6,8 +6,8 @@
     "\\core\\static\\core",
     "\\core\\templates",
     "\\core\\templates\\core",
-    "\\templates"
+    "\\mysite"
   ],
-  "SelectedNode": "\\core\\views.py",
+  "SelectedNode": "\\mysite\\urls.py",
   "PreviewInSolutionExplorer": false
 }
