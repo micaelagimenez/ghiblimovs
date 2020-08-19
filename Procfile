@@ -1,1 +1,1 @@
-web: gunicorn ghiblimovs mysite.wsgi 
+web: gunicorn --pythonpath ghiblimovs mysite.wsgi --log-file -
