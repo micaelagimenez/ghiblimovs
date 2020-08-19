@@ -125,12 +125,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
-=======
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     
 )
->>>>>>> 3df6291d18edb94ff8ab38d254574a430919e25d
