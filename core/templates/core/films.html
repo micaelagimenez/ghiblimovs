@@ -16,7 +16,7 @@
         <header><img src="https://upload.wikimedia.org/wikipedia/sco/c/ca/Studio_Ghibli_logo.svg" alt="logo"></header>
         <form action='/films' method="POST">
             {% csrf_token %}
-            <input type="text" name="search" class="searchTerm" placeholder="Type character name, gender, age" required>
+            <input type="text" name="search" class="searchTerm" placeholder="Type title, release date, director, producer" required>
             <button type="submit"></button>
         </form>
 
