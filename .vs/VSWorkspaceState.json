@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\core",
+    "\\core\\static",
+    "\\core\\static\\core",
+    "\\core\\templates",
+    "\\core\\templates\\core",
+    "\\mysite",
+    "\\staticfiles",
+    "\\staticfiles\\core",
+    "\\templates"
   ],
-  "SelectedNode": "\\Procfile",
+  "SelectedNode": "\\core\\views.py",
   "PreviewInSolutionExplorer": false
 }

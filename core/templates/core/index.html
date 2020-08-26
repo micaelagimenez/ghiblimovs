@@ -1,56 +1,53 @@
 ﻿{% load static %}
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <title>Ghibli Studio | Movies</title>
-    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+	<title>Ghibli Studios</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="{% static 'core/index.css' %}" />
 </head>
 <body>
-    <div class=" header">
+	<div class="layer">
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="logo"><strong></strong></a>
 
-    </div>
-    <div class="wrap">
-        <form action='/' method="POST">
-            {% csrf_token %}
-            <div class="search">
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
 
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>Ghibli Studios Index</h1>
+				</header>
 
-                <input type="text" name="search" class="searchTerm" placeholder="Type movie name">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                <button type="submit" class="searchButton">
+				<div class="flex ">
 
-                    <i class="fa fa-search" style="font-size:24px"></i>
-                </button>
+					<div>
+						<span class="icon fa-car"></span>
+						<a href="people" class="button">People</a>
+					</div>
 
-            </div>
+					<div>
+						<span class="icon fa-camera"></span>
+						<a href="films" class="button">Films</a>
+					</div>
 
+					<div>
+						<span class="icon fa-bug"></span>
+						<a href="species" class="button">Species</a>
+					</div>
 
-        </form>
-    </div>
+				</div>
 
-    {% if movies %}
-    {% for movie in movies %}
-    <div>
-        <ul class="result">
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
-            </style>
-          
-            <h4>{{movie.Title}}</h4>
-            <h5 style= "color:lightslategray;">
-                Release date: {{movie.Release_date}} <br>
-                Director: {{movie.Director}}
-                <br>Producer: {{movie.Producer}}
-                <br>
-                <br>{{movie.Description}}
-            </h5>
-          
+			</div>
+		</section>
+	</div>
 
-        </ul>
-        {% endfor %}
-
-        {% endif %}
-    </div>
 
 
 </body>

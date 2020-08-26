@@ -1,0 +1,38 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ghibli Studio | Films</title>
+    <link rel="stylesheet" href="{% static 'core/films.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <div class="wrap">
+        <header><img src="https://upload.wikimedia.org/wikipedia/sco/c/ca/Studio_Ghibli_logo.svg" alt="logo"></header>
+        <form action='/films' method="POST">
+            {% csrf_token %}
+            <input type="text" name="search" class="searchTerm" placeholder="Type character name, gender, age" required>
+            <button type="submit"></button>
+        </form>
+
+        {% if movies %}
+        {% for movie in movies %}
+        <section>
+            <h4>{{movie.Title}}</h4>
+            <p>Release date: <b>{{movie.Release_date}}</b></p>
+            <p>Director: <b>{{ movie.Director}}</b></p>
+            <p>Producer: <b>{{movie.Producer}}</b></p>
+            <p>{{movie.Description}}</p>
+        </section>
+        {% endfor %}
+
+            {% endif %}
+     
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ghibli Studio | People</title>
+    <link rel="stylesheet" href="{% static 'core/people.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <div class="wrap">
+        <header><img src="https://upload.wikimedia.org/wikipedia/sco/c/ca/Studio_Ghibli_logo.svg" alt="logo"></header>
+        <form action='/people' method="POST">
+            {% csrf_token %}
+            <input type="text" name="search" class="searchTerm" placeholder="Type character name, gender, age" required>
+            <button type="submit"></button>
+        </form>
+            {% if people %}
+        {% for p in people %}
+        <section>
+            <h4>{{p.name}}</h4>
+            <p>Age: <b>{{p.age}}</b></p>
+            <p>Gender: <b>{{ p.gender }}</b></p>
+            <p>Eye color: <b>{{p.eye_Color}}</b></p>
+            <p>Hair color: <b>{{p.hair_Color}}</b></p>
+        </section>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+</body>
+</html>
